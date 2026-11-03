@@ -1,0 +1,19 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "privatemode-ai/glm-latest",
+  "provider": {
+    "privatemode-ai": {
+      "options": {
+        "apiKey": "{env:PRIVATEMODE_API_KEY}"
+      }
+    }
+  },
+  "permission": {
+    "webfetch": "deny",
+    "bash": {
+      "*": "allow",
+      "curl *": "deny",
+      "wget *": "deny"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://localhost:8080",
+    "ANTHROPIC_AUTH_TOKEN": "sk-privatemode",
+    "ANTHROPIC_DEFAULT_MODEL": "glm-latest",
+    "CLAUDE_CODE_MAX_CONTEXT_TOKENS": "1048576",
+    "CLAUDE_CODE_ATTRIBUTION_HEADER": "0",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1"
+  },
+  "availableModels": [
+    "glm-latest",
+    "glm-flash-latest"
+  ],
+  "modelPicker": {
+    "options": [
+      {
+        "model": "glm-latest",
+        "label": "GLM"
+      },
+      {
+        "model": "glm-flash-latest",
+        "label": "GLM Flash"
+      }
+    ],
+    "replaceBuiltInOptions": true
+  },
+  "permissions": {
+    "allow": [
+      "Bash(.venv/bin/python:*)"
+    ],
+    "deny": [
+      "WebFetch",
+      "WebSearch",
+      "Bash(curl:*)",
+      "Bash(wget:*)"
+    ]
+  }
+}
